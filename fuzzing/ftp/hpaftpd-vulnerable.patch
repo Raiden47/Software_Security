@@ -1,0 +1,12 @@
+diff -uNr a/minilib.c b/minilib.c
+--- a/minilib.c	2007-06-16 11:39:14.000000000 +0200
++++ b/minilib.c	2021-04-20 03:40:53.887695217 +0200
+@@ -91,7 +91,7 @@
+     int i;
+ 
+     ltrim(rtrim(str, CNF_EMPTY), CNF_EMPTY);
+-    for(i = 0; str[i] && (!strchr(CNF_EMPTY, str[i])) && i < key_max; i++)
++    for(i = 0; str[i] && (!strchr(CNF_EMPTY, str[i])); i++)
+         key[i] = str[i];
+     key[i] = '\0';
+     if(str[i]){

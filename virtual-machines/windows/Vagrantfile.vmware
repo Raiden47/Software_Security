@@ -1,0 +1,31 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Vagrantfile API/syntax version.  The "2" is the Vagrant configuration version.
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.require_version ">= 1.6.2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+    config.vm.box = "baunegaard/win10pro-en"
+    config.vm.box_version = "1.4.0"
+    config.vm.communicator = "winrm"
+    config.vm.hostname = "malware-vm"   # set hostname
+
+    # admin user name and password
+    config.winrm.username = "vagrant"
+    config.winrm.password = "vagrant"
+
+    config.vm.guest = :windows
+    config.windows.halt_timeout = 15
+
+    config.vm.network :forwarded_port, guest: 3389, host: 3389, id: "rdp", auto_correct: true
+
+    config.vm.provider :vmware_desktop do |v|
+        v.utility_certificate_path = ENV["VMWARE_API_CERT_PATH"]
+        v.gui = true
+        v.cpus = "2"
+        v.memory = "8192"
+    end
+
+end

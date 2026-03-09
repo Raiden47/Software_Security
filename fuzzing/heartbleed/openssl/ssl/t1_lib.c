@@ -2561,6 +2561,10 @@ tls1_process_heartbeat(SSL *s)
 	/* Read type and payload length first */
 	hbtype = *p++;
 	n2s(p, payload);
+	
+	if (&s->s3->rrec.length < (sizeof(hbtype) + sizeof(payload) + padding))
+		return 0;
+	
 	pl = p;
 
 	if (s->msg_callback)

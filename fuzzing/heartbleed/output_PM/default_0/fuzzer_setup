@@ -1,0 +1,5 @@
+# environment variables:
+AFL_KILL_SIGNAL=9
+AFL_USE_ASAN=1
+# command line:
+'afl-fuzz' '-i' 'input' '-o' 'output_PM' '-D' '--' './handshake_PM'

@@ -39,6 +39,12 @@ int main() {
 
   /* TODO: To spoof one end of the handshake, we need to write data to sinbio
    * here */
+  
+  // basic_istream& read( char_type* s, std::streamsize count );
+  int size = 100;
+  char data[size];
+  read(STDIN_FILENO, data, size);
+  
   BIO_write(sinbio, data, size);
 
   SSL_do_handshake(server);

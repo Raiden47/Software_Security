@@ -1,0 +1,3 @@
+- [Writing a basic C++ Code QL query](https://lgtm.com/help/lgtm/console/ql-cpp-basic-example)
+- [Introduction to CodeQL](https://codeql.github.com/docs/writing-codeql-queries/introduction-to-ql/)
+- [CodeQL Docs](https://codeql.github.com/docs/) 

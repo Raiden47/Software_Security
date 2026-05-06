@@ -1,0 +1,16 @@
+<html>
+	<body onload="document.change_firewall.submit()">
+		<form name="change_firewall" action="http://192.168.164.131/cgi-bin/luci/admin/network/firewall/forwards" method="POST">
+			<input type="hidden" name="cbi.submit" value="1"/>
+			<input type="hidden" name="_newfwd.name" value="ssh"/>
+			<input type="hidden" name="_newfwd.proto" value="tcp"/>
+			<input type="hidden" name="_newfwd.extzone" value="wan"/>
+			<input type="hidden" name="_newfwd.extport" value="1111"/>
+			<input type="hidden" name="_newfwd.intzone" value="lan"/>
+			<input type="hidden" name="_newfwd.intaddr" value="192.168.1.1"/>
+			<input type="hidden" name="_newfwd.intport" value="11"/>
+			<input type="hidden" name="cbi.cts.firewall.redirect." value="Add"/>
+			<input type="hidden" name="_newfwd.apply" value="1"/>
+		</form>
+	</body>
+</html>

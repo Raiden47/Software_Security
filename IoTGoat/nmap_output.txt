@@ -1,0 +1,16 @@
+Completed SYN Stealth Scan at 11:59, 2660.03s elapsed (65535 total ports)
+Nmap scan report for 192.168.164.131 (192.168.164.131)
+Host is up (0.00045s latency).
+Not shown: 65528 closed tcp ports (reset)
+PORT      STATE SERVICE
+22/tcp    open  ssh
+53/tcp    open  domain
+80/tcp    open  http
+443/tcp   open  https
+5000/tcp  open  upnp
+5515/tcp  open  unknown
+65534/tcp open  unknown
+MAC Address: 00:0C:29:45:1F:AD (VMware)
+
+
+nc -nv 192.168.164.131 5515 
